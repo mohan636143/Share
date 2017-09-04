@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:Share.Controls"
+    x:Class="Share.Views.LoginPage">
+	<ContentPage.Content>
+        <Grid Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.25*"/>
+            </Grid.RowDefinitions>
+            <Image 
+                Grid.Row="0" Grid.RowSpan="4"
+                Source="LoginBG.png" Aspect="AspectFill">
+            </Image>
+            <Grid Grid.Row="1" Padding="25,10" RowSpacing="10"> 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <controls:ExtendedEntry 
+                    Grid.Row="0" HeightRequest="60" BorderRadius="120"
+                    BackgroundColor="#c0392b"
+                    Placeholder="User ID">
+                </controls:ExtendedEntry>
+                <controls:ExtendedEntry 
+                    Grid.Row="1" HeightRequest="60" BorderRadius="20"
+                    BackgroundColor="#19c589"
+                    Placeholder="Password">
+                </controls:ExtendedEntry>
+            </Grid>
+            <controls:ExtendedButton 
+                Margin="25,10" Grid.Row="2" 
+                VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                HeightRequest="45" BorderRadius="45" 
+                BackgroundColor="#AEAEAE" TextColor="White"
+                Text="Login" />
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Share.Controls"
+    xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+    x:Class="Share.MapPage">
+	<ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <maps:Map x:Name="inMap" Grid.Row="0" Grid.RowSpan="2"
+            Margin="0" MapType="Street"
+            IsShowingUser="true" >
+            </maps:Map>
+           <controls:ExtendedEntry
+            Grid.Row="0" Margin="20" Opacity="0.75" 
+            BackgroundColor="Black" HeightRequest="50"
+            FontSize="25"
+            BorderColor="#AEAEAE" BorderWidth="2" BorderRadius="10"
+            Placeholder="Enter Start Location" PlaceholderColor="White">
+                <controls:ExtendedEntry.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" Android="10,5,60,5" iOS="10,5" />
+                </controls:ExtendedEntry.Margin>
+            </controls:ExtendedEntry>
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>
